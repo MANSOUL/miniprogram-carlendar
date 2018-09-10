@@ -1,0 +1,70 @@
+/* pages/carlendar/index.wxss */
+.carlendar {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.translater {
+  display: flex;
+  transform: translateX(-100%);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+
+.date-items {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* 日期 */
+.week-day,
+.date-row {
+  white-space: nowrap;
+}
+
+.week-day-item,
+.date-col {
+  text-align: center;
+  width: 14.285%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.week-day-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.date-col {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+
+.date-text-circle {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* colors */
+.gray-item {
+  background: linear-gradient(170deg, #efefef, #aaa);
+  color: #fff;
+}
+
+.red-item {
+  background: linear-gradient(170deg, #f9d398, #f59e9e 45%, #fe8080);
+  color: #fff;
+}
+.red {
+  color: #fe8080;
+}
+
+.gray {
+  color: #bcbcbc;
+}

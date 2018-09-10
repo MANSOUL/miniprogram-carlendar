@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "deleteable-tag": "../../components/deleteable-tag/index"
+  }
+}

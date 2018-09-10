@@ -1,0 +1,60 @@
+.container-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 80rpx;
+  background-color: #efefef;
+  box-sizing: border-box;
+}
+
+.input-tag-money {
+  height: 86rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+}
+
+.input-tag{
+  margin-top: 20rpx;
+}
+
+.type-tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+}
+
+.type-tag {
+  position: relative;
+  display: block;
+  background-color: #bfbfbf;
+  color: #fff;
+  font-size: 28rpx;
+  height: 36rpx;
+  padding: 8rpx 10rpx;
+  border-radius: 36rpx;
+  margin-right: 24rpx;
+  margin-bottom: 22rpx;
+  min-width: 100rpx;
+  text-align: center;
+}
+
+.delete-icon {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  box-shadow:0 0 3px 0 rgba(0,0,0,0.3);
+  border-radius:50%;
+}
+
+.active {
+  background-color: #fa8080;
+}
+
+.button-add {
+  width: 120rpx;
+  height: 120rpx;
+  align-self: flex-end;
+  margin: 0 auto;
+}

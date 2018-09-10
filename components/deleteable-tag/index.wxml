@@ -1,0 +1,13 @@
+<view 
+  bindtap='handleTagTap' 
+  bindlongpress='handleLongTap'
+  class='type-tag{{value === inspectValue ? " active" : ""}}'>
+  <text>{{value}}</text>
+  <icon 
+    data-type="delete"
+    type="clear" 
+    size="16" 
+    color="#fe8080" 
+    class='delete-icon{{deleteVisible ? " delete-icon-show" : ""}}'>
+  </icon>
+</view>

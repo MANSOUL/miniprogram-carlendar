@@ -1,0 +1,81 @@
+<!--pages/carlendar/index.wxml-->
+<view class="carlendar">
+  <view class="date-box">
+    <view class="week-day">
+      <text class="week-day-item gray">天</text>
+      <text class="week-day-item">一</text>
+      <text class="week-day-item">二</text>
+      <text class="week-day-item">三</text>
+      <text class="week-day-item">四</text>
+      <text class="week-day-item">五</text>
+      <text class="week-day-item gray">六</text>
+    </view>
+    <view
+      bindtap="handleCarlendarTap"
+      bindtouchstart="handleTouchStart" 
+      bindtouchmove="handleTouchMove" 
+      bindtouchend="handleTouchEnd"
+      bindtouchcancel="handleTouchEnd">
+      <view 
+        class="translater"
+        style="{{translaterStyle}}" 
+        bindtransitionend="handleTransitionEnd">
+        <!-- 上月 -->
+        <view class="date-items">
+          <view 
+            class="date-row" 
+            wx:for="{{prevDates}}" 
+            wx:key="{{index}}" 
+            wx:for-item="rowItem">
+            <view 
+              wx:for="{{rowItem}}" 
+              wx:key="{{index}}" 
+              class="date-col {{index===0 || index===6 ? 'gray' : ''}}">
+              <view 
+                class="date-text-circle">
+                {{item}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 当月 -->
+        <view class="date-items">
+          <view 
+            class="date-row" 
+            wx:for="{{currentDates}}" 
+            wx:key="{{index}}" 
+            wx:for-item="rowItem">
+            <view 
+              wx:for="{{rowItem}}" 
+              wx:key="{{index}}" 
+              class="date-col {{index===0 || index===6 ? 'gray' : ''}}">
+              <view 
+                data-date="{{item}}"
+                class="date-text-circle {{selectedDate===item ? 'gray-item' : ''}} {{today===item && month === originMonth && year === originYear ? selectedDate !== today ? 'red' : 'red-item' : ''}}">
+                {{item}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 下月 -->
+        <view class="date-items">
+          <view 
+            class="date-row" 
+            wx:for="{{nextDates}}" 
+            wx:key="{{index}}" 
+            wx:for-item="rowItem">
+            <view 
+              wx:for="{{rowItem}}" 
+              wx:key="{{index}}" 
+              class="date-col {{index===0 || index===6 ? 'gray' : ''}}">
+              <view 
+                class="date-text-circle">
+                {{item}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

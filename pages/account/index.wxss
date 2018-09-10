@@ -1,0 +1,75 @@
+/* pages/account/index.wxss */
+.account-container {
+  background-color: #efefef;
+  height: 100vh;
+}
+
+.create-new {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 100rpx;
+  margin: 0 auto;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 110rpx;
+  text-align: center;
+  background-color: #fe8080;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 70rpx;
+  box-shadow: 2rpx 2rpx 8rpx 0 rgba(0,0,0,0.3);
+}
+
+/*total*/
+.total-item {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 44rpx;
+  text-align: right;
+  font-size: 44rpx;
+  color: #fe8080;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+/*spend*/
+.spend-list {
+  margin-top: 40rpx;
+}
+
+.spend-item {
+  padding: 0 44rpx;
+  background-color: #fff;
+}
+.spend-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #efefef;
+}
+.spend-item-left {
+  display: flex;
+  align-items: center;
+}
+.time {
+  margin-right: 30rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+.tag {
+  font-size: 36rpx;
+}
+.spend {
+  font-size: 36rpx;
+}
+
+/*no-record*/
+.no-record {
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+}

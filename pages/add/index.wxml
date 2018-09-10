@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class='container-box'>
+  <view>
+    <input 
+      value="{{money}}" 
+      class='input-tag-money' 
+      type='digit' 
+      placeholder='金额' 
+      bindinput='handleInput'></input>
+    <input 
+      wx:if="{{inputTagShow}}" 
+      class='input-tag-money input-tag' 
+      type='text' 
+      placeholder='新标签' 
+      bindinput='handleTagInput' 
+      auto-focus></input>
+    <view class='type-tag-box'>
+      <deleteable-tag 
+        wx:for="{{tags}}" 
+        wx:key="{{item}}" 
+        value="{{item}}"
+        inspectValue="{{tag}}"
+        bindcustomtap="handleTagTap"
+        binddeletetap="handleTagDelete">
+      </deleteable-tag>
+      <text class='type-tag {{newTagActive ? "active" : ""}}' bindtap='handleNewTagTap'>+</text>
+    </view>
+  </view>
+  <icon bindtap='handleSaveItem' class='button-add' type="success" size="50" color="{{buttonColors[buttonIndex]}}"></icon>
+</view>
