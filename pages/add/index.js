@@ -1,5 +1,5 @@
-const tagModel = require('../models/TagModel')
-const accountModel = require('../models/AccountModel')
+const tagModel = require('../../models/TagModel')
+const accountModel = require('../../models/AccountModel')
 Page({
   data: {
     year: '',

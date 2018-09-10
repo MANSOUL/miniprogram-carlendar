@@ -1,6 +1,6 @@
 // pages/account/index.js
 const util = require('../../utils/util')
-const accountModel = require('../models/AccountModel')
+const accountModel = require('../../models/AccountModel')
 function getTotalMoney(list) {
   let total = 0
   for (let i = 0; i < list.length; i++) {

@@ -1,7 +1,6 @@
-// pages/carlendar/index.js
 import Carlendar from './Carlendar'
 const carlendar = new Carlendar()
-
+const WINDOW_WIDTH = wx.getSystemInfoSync().windowWidth  
 Component({
   /**
    * 组件的属性列表
@@ -62,20 +61,28 @@ Component({
       let touch = e.touches[0]
       this.prevPageX = touch.pageX
     },
-    handleTouchMove() {
-
-    },
-    handleTouchEnd(e) {
+    handleTouchMove(e) {
       let touch = e.changedTouches[0]
       let curPageX = touch.pageX
       let offsetX = curPageX - this.prevPageX
-      if (Math.abs(offsetX) < 20) {
-        return
-      }
+      let percentX = offsetX / WINDOW_WIDTH
+      this.translate += (percentX * 100)
+      this.prevPageX = curPageX
       if (offsetX > 0) { // prev
-        this.translate = 0
+        this.dir = 'prev'
       }
       else { // next
+        this.dir = 'next'
+      }
+      this.setData({
+        translaterStyle: `transform: translateX(${this.translate}%);transition-duration: 0ms;`
+      })
+    },
+    handleTouchEnd(e) {
+      if (this.dir === 'prev') {
+        this.translate = 0
+      }
+      else {
         this.translate = -200
       }
       this.setData({
@@ -93,6 +100,7 @@ Component({
       this.setData({
         translaterStyle: `transform: translateX(-100%); transition-duration: 0ms;`
       })
+      this.translate = -100
       this.setDateDatas(offIndex)
     },
     setDateDatas(offset, firstEnter) {
@@ -128,8 +136,13 @@ Component({
     }
   },
 
-  attached() {
+  created() {
+    this.dir = ''
+    this.prevPageX = 0
     this.translate = -100
+  },
+
+  attached() {
     this.setDateDatas(0, true)
   }
 })

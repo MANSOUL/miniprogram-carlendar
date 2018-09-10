@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "carlendar": "../carlendar/index"
+    "carlendar": "../../components/carlendar/index"
   }
 }
