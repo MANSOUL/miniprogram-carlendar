@@ -23,14 +23,14 @@ function getToday(dateObj = {}) {
 class AccountModel {
   constructor() {
     this.lists = []
-    this._getTagsFromStorage()
+    this._getListFromStorage()
   }
 
-  _getTagsFromStorage() {
+  _getListFromStorage() {
     this.lists = wx.getStorageSync(KEY) || []
   }
 
-  _saveTagsToStorage() {
+  _saveListToStorage() {
     wx.setStorageSync(KEY, this.lists)
   }
 
@@ -46,7 +46,7 @@ class AccountModel {
   }
 
   getListByDate(date) {
-    this._getTagsFromStorage()
+    this._getListFromStorage()
     return this._filterLists(this.lists, date)
   }
 
@@ -58,7 +58,7 @@ class AccountModel {
       tag
     }
     this.lists.push(item)
-    this._saveTagsToStorage()
+    this._saveListToStorage()
   }
 
   remove(id) {
@@ -72,8 +72,8 @@ class AccountModel {
         break
       }
     }
-    this.lists.splice(index, -1)
-    this._saveTagsToStorage()
+    this.lists.splice(index, 1)
+    this._saveListToStorage()
   }
 }
 

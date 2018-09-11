@@ -12,6 +12,16 @@ Component({
     optap: {
       type: Function
     },
+    identity: {
+      type: String,
+      observer: function(r, o) {
+        if (r !== o) {
+          this.translateX = 0
+          this.translateUpper()
+          this.opend = false
+        }
+      }
+    },
     height: {
       type: Number,
       value: 120
@@ -38,9 +48,7 @@ Component({
       if (this.translateX > 0) {
         return
       }
-      this.setData({
-        upperStyle: `transform: translateX(${this.translateX}px); transition-duration: 0ms;`
-      })
+      this.translateUpper()
       this.prevPageX = pageX
     },
     handleTouchEnd(e) {
@@ -66,7 +74,13 @@ Component({
     handleOpTap(e) {
       let optype = e.currentTarget.dataset.op
       this.triggerEvent('optap', {
-        op: optype
+        op: optype,
+        identity: this.data.identity
+      })
+    },
+    translateUpper() {
+      this.setData({
+        upperStyle: `transform: translateX(${this.translateX}px); transition-duration: 0ms;`
       })
     },
     getOpWidth() {
@@ -80,6 +94,9 @@ Component({
     this.prevPageX = 0
     this.translateX = 0
     this.opend = false
+  },
+  attached() {
+    // 已获取到props
     this.OP_FULLWIDTH = OP_WIDTH * this.data.ops.length
     this.CRITICAL_WIDTH = this.OP_FULLWIDTH * CRITICAL_RATE
   },

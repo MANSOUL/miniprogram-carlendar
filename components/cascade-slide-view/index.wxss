@@ -32,9 +32,11 @@
   font-size: 14px;
 }
 .cascade-view__op--0 {
-  background-color: #8977fa;
+  /*background-color: #8977fa;*/
+  background-color: #fe8080;
 }
 
 .cascade-view__op--1 {
-  background-color: #ff1290;
+  /*background-color: #ff1290;*/
+  background-color: #fe8080;
 }

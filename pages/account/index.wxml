@@ -10,6 +10,7 @@
       ops="{{ops}}"
       wx:for="{{spendList}}" 
       wx:key="{{item.id}}"
+      identity="{{item.id}}"
       bindoptap="handleViewOpTap">
       <view class='spend-item'>
         <view class='spend-item-wrapper'>

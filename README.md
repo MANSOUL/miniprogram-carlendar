@@ -70,6 +70,7 @@
 | ops | Array | 操作项数组 |
 | optap | Function | 操作项点击回调 |
 | height | Number | 高度 |
+| identity | String | 项目唯一标志 |
 | slot | Slot | 插槽 |
 
 - 使用方法：

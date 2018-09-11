@@ -16,7 +16,7 @@ Page({
     date: '',
     total: 0,
     spendList: [],
-    ops: ['操作', '删除']
+    ops: ['删除']
   },
 
   onLoad() {
@@ -68,6 +68,11 @@ Page({
   },
 
   handleViewOpTap(e) {
-    console.log(e.detail)
+    const op = e.detail.op
+    const id = e.detail.identity
+    if (op === '删除') {
+      accountModel.remove(id)
+      this.getDateList(this.data.year, this.data.month, this.data.date)
+    }
   }
 })
