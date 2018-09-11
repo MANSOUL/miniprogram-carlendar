@@ -1,5 +1,4 @@
 {
-  "component": true,
   "usingComponents": {
     "carlendar": "../../components/carlendar/index",
     "cascade-view": "../../components/cascade-slide-view/index"
