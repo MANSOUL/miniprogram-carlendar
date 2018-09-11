@@ -1,0 +1,25 @@
+<view 
+  style="height: {{height}}rpx;"
+  class="cascade-view">
+  <view 
+    class="cascade-view__upper"
+    style="{{upperStyle}}"
+    bindtouchstart="handleTouchStart"
+    bindtouchmove="handleTouchMove"
+    bindtouchend="handleTouchEnd"
+    bindtouchcancel="handleTouchEnd">
+    <slot></slot>
+  </view>
+  <view class="cascade-view__bottom">
+    <view class="cascade-view__opwrapper" id="op-wrapper">
+      <view 
+        wx:for="{{ops}}" 
+        wx:key="{{item}}" 
+        data-op="{{item}}"
+        bindtap="handleOpTap"
+        class="cascade-view__op cascade-view__op--{{index}}">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>

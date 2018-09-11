@@ -23,8 +23,8 @@
 
 /*total*/
 .total-item {
-  height: 100rpx;
-  line-height: 100rpx;
+  height: 110rpx;
+  line-height: 110rpx;
   padding: 0 44rpx;
   text-align: right;
   font-size: 44rpx;
@@ -39,6 +39,7 @@
 }
 
 .spend-item {
+  width: 100%;
   padding: 0 44rpx;
   background-color: #fff;
 }
@@ -46,7 +47,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100rpx;
+  height: 110rpx;
   border-bottom: 1px solid #efefef;
 }
 .spend-item-left {

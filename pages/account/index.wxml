@@ -5,15 +5,22 @@
     bindmonthchange='handleMonthChange'
     binddatechange='handleDateChange'></carlendar>
   <view class='spend-list'>
-    <view class='spend-item' wx:for="{{spendList}}" wx:key="{{item.id}}">
-      <view class='spend-item-wrapper'>
-        <view class='spend-item-left'>
-          <view class='time'>{{item.dateHourString}}</view>
-          <view class='tag'>{{item.tag}}</view>
+    <cascade-view 
+      height="110"
+      ops="{{ops}}"
+      wx:for="{{spendList}}" 
+      wx:key="{{item.id}}"
+      bindoptap="handleViewOpTap">
+      <view class='spend-item'>
+        <view class='spend-item-wrapper'>
+          <view class='spend-item-left'>
+            <view class='time'>{{item.dateHourString}}</view>
+            <view class='tag'>{{item.tag}}</view>
+          </view>
+          <view class='spend'>¥{{item.money}}</view>
         </view>
-        <view class='spend'>¥{{item.money}}</view>
       </view>
-    </view>
+    </cascade-view>
   </view>
   <view wx:if="{{spendList.length > 0}}" class='total-item'>
     <text>¥{{total}}</text>

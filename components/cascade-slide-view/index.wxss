@@ -1,0 +1,40 @@
+.cascade-view {
+  position: relative;
+  height: 120rpx;
+}
+.cascade-view__upper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.cascade-view__bottom {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+}
+.cascade-view__opwrapper {
+  display: flex;
+  flex-direction: row;
+}
+.cascade-view__op {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: #fff;
+  font-size: 14px;
+}
+.cascade-view__op--0 {
+  background-color: #8977fa;
+}
+
+.cascade-view__op--1 {
+  background-color: #ff1290;
+}

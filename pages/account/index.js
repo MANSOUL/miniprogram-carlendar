@@ -15,7 +15,8 @@ Page({
     month: '',
     date: '',
     total: 0,
-    spendList: []
+    spendList: [],
+    ops: ['操作', '删除']
   },
 
   onLoad() {
@@ -64,5 +65,9 @@ Page({
     wx.setNavigationBarTitle({
       title
     })
+  },
+
+  handleViewOpTap(e) {
+    console.log(e.detail)
   }
 })
