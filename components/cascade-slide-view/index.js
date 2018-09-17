@@ -48,6 +48,9 @@ Component({
       if (this.translateX > 0) {
         return
       }
+      if (this.translateX < -this.OP_FULLWIDTH) {
+        this.translateX = - this.OP_FULLWIDTH
+      }
       this.translateUpper()
       this.prevPageX = pageX
     },
@@ -97,7 +100,9 @@ Component({
   },
   attached() {
     // 已获取到props
+    // 可滑动总长度
     this.OP_FULLWIDTH = OP_WIDTH * this.data.ops.length
+    // 惯性长度
     this.CRITICAL_WIDTH = this.OP_FULLWIDTH * CRITICAL_RATE
   },
   ready() {

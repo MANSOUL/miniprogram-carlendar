@@ -24,6 +24,7 @@
     </cascade-view>
   </view>
   <view wx:if="{{spendList.length > 0}}" class='total-item'>
+    <text>当月 {{monthTotal}}</text>
     <text>¥{{total}}</text>
   </view>
   <view wx:if="{{spendList.length === 0}}"  class='no-record'><text>无记录</text></view>

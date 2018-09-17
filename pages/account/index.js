@@ -16,7 +16,8 @@ Page({
     date: '',
     total: 0,
     spendList: [],
-    ops: ['删除']
+    ops: ['删除'],
+    monthTotal: 0
   },
 
   onLoad() {
@@ -26,6 +27,7 @@ Page({
     let {year, month, date} = this.data
     if (year !== '') {
       this.getDateList(year, month, date)
+      this.getMonthList(year, month)
     }
   },
 
@@ -41,6 +43,14 @@ Page({
     })
   },
 
+  getMonthList(year, month) {
+    let spendList = accountModel.getListByDate(`${year}-${month}`)
+    let monthTotal = getTotalMoney(spendList)
+    this.setData({
+      monthTotal
+    })
+  },
+
   handleMonthChange(e) {
     this.setTitle(e.detail.text)
   },
@@ -51,6 +61,9 @@ Page({
     month = util.formatNumber(month)
     date = util.formatNumber(date)
     this.getDateList(year, month, date)
+    if (year !== this.data.year || month !== this.month) {
+      this.getMonthList(year, month)
+    }
   },
 
   handleAddTap() {
