@@ -7,7 +7,7 @@
   height: 100%;
   position: absolute;
   z-index: 1;
-  background-color: #fff;
+  background-color: #383e48;
   display: flex;
   align-items: center;
 }

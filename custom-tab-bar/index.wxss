@@ -1,0 +1,7 @@
+.tab {
+
+}
+
+.tab__item {
+  color: #ffffff;
+}

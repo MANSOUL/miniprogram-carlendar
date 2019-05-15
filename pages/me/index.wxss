@@ -1,0 +1,154 @@
+.page {
+  position: relative;
+  height: 100vh;
+  background-color: #323039;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+/* auth layer */
+.auth {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+.auth__button {
+  background-color: transparent;
+  color: #5cb2d3;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.dashpad {
+  display: flex;
+  align-items: center;
+}
+.dash {
+  color: #ffffff;
+  flex-grow: 1;
+}
+.dash__label {
+  display: block;
+  font-size: 46rpx;
+  font-weight: bold;
+}
+.dash__time {
+  display: block;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: 4rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dash_uname {
+  color: #5cb2d3;
+}
+.dash__avatar {
+  width: 90rpx;
+  height: 90rpx;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-size: contain;
+}
+.upload-btn {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-btn--upload::before {
+  content: "";
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  background-image: url("http://cdn.jokme.com/upload1.png");
+  background-size: contain;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+.upload-btn--uploading::before {
+  content: "";
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  border: 6rpx solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotate .5s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.chart__canvas {
+  background-color: #fff;
+}
+.record {
+  color: #5cb2d3;
+  font-size: 26rpx;
+  margin-top: 16rpx;
+}
+
+/* music card */
+.mcard {
+  width: 100%;
+  /* height: 240rpx; */
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding-bottom: 20rpx;
+}
+
+/*  */
+.tile {
+  color: #ffffff;
+  font-size: 34rpx;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 60rpx;
+}
+.tile--bm {
+  margin-top: 90rpx;
+}
+.tile::before {
+  content: "";
+  width: 6rpx;
+  height: 1em;
+  display: inline-block;
+  border-radius: 6rpx;
+  margin-right: 14rpx;
+  background: linear-gradient(180deg, #2ebf73 0%, #5cb2d3 100%);
+}
+
+/*  */
+.account__item {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin-top: 34rpx;
+  padding-bottom: 12rpx;
+  border-bottom: 1px solid #383e48;
+}
+.account__label {
+  font-size: 28rpx;
+}
+.account__value {
+  color: #5cb2d3;
+  font-weight: bold;
+  font-size: 31rpx;
+}

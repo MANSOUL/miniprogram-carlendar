@@ -1,5 +1,7 @@
-const tagModel = require('../../models/TagModel')
-const accountModel = require('../../models/AccountModel')
+const tagModel = require('../../models/TagModel');
+const accountModel = require('../../models/AccountModel');
+const UploadTip = require('../../models/UploadTip');
+
 Page({
   data: {
     year: '',
@@ -102,12 +104,13 @@ Page({
 
   handleSaveItem() {
     if (this.data.buttonIndex !== 1) {
-      return
+      return;
     }
     let {year, month, date} = this.data
     accountModel.add(this.data.money, this.data.tag, {
       year,month,date
     })
+    UploadTip.set(true);
     wx.showToast({title: '保存成功'})
     this.setData({
       money: 0,

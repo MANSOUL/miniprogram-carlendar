@@ -6,7 +6,8 @@
       class='input-tag-money' 
       type='digit' 
       placeholder='金额' 
-      bindinput='handleInput'></input>
+      bindinput='handleInput'
+      auto-focus></input>
     <input 
       wx:if="{{inputTagShow}}" 
       class='input-tag-money input-tag' 

@@ -1,0 +1,4 @@
+<view class="tab">
+  <view class="tab__item">1</view>
+  <view class="tab__item">2</view>
+</view>

@@ -1,3 +1,5 @@
+const {add} = require('../utils/util');
+
 const KEY = 'every_account_list'
 function idGenerator() {
   return Date.now() + ''
@@ -74,6 +76,27 @@ class AccountModel {
     }
     this.lists.splice(index, 1)
     this._saveListToStorage()
+  }
+
+  getTotalMoney(list) {
+    let total = 0
+    for (let i = 0; i < list.length; i++) {
+      total = add(total, Number(list[i].money))
+    }
+    return total
+  }
+
+  getTotalDay(list) {
+    const arr = [];
+    let count = 0;
+    list.forEach(item => {
+      const date = item.date.split(' ')[0]
+      if (!arr.includes(date)) {
+        count += 1;
+        arr.push(date);
+      }
+    })
+    return count;
   }
 }
 

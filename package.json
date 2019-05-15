@@ -1,0 +1,21 @@
+{
+  "name": "miniprogram-carlendar",
+  "version": "1.0.0",
+  "description": "一个日常小程序demo，自带了几个独立组件，可脱离本项目使用",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MANSOUL/miniprogram-carlendar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MANSOUL/miniprogram-carlendar/issues"
+  },
+  "homepage": "https://github.com/MANSOUL/miniprogram-carlendar#readme",
+  "dependencies": {}
+}

@@ -1,0 +1,39 @@
+<view class="page">
+  <view wx:if="{{!hasUserInfo}}" class="auth">
+    <button class="auth__button" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">授权登录信息</button>
+  </view>
+  <view class="dashpad">
+    <view class="dash">
+      <text class="dash__label">Home Dashboard</text>
+      <text class="dash__time">Good {{timeTrunk}}<text class="dash_uname">{{userInfo.nickName ? ' '+userInfo.nickName+'!' : ''}}</text></text>
+    </view>
+    <view wx:if="userInfo.avatarUrl" class="dash__avatar" style="background-image: url({{userInfo.avatarUrl}});">
+      <view wx:if="{{showUploadTip}}" class="upload-btn {{uploading ? 'upload-btn--uploading' : 'upload-btn--upload'}}" bindtap="handleUploadData"></view>
+    </view>
+  </view>
+  <view wx:if="{{showUploadTip}}" class="record">
+    {{!uploadSuccess ? '!!!有新记录，点击头像上传' : '上传成功'}}
+  </view>
+  <view class="tile tile--bm">Account</view>
+  <view class="account">
+    <view class="account__item">
+      <text class="account__label">消费记录</text>
+      <text class="account__value">{{totalCount}}条</text>
+    </view>
+    <view class="account__item">
+      <text class="account__label">已记录</text>
+      <text class="account__value">{{totalDay}}天</text>
+    </view>
+    <view class="account__item">
+      <text class="account__label">共消费</text>
+      <text class="account__value">¥{{totalMoney}}</text>
+    </view>
+  </view>
+  <view class="tile">Today music</view>
+  <view class="mcard">
+    <music-card></music-card>
+  </view>
+  <view class="chart">
+    <!-- <canvas class="chart__canvas" canvas-id="chart__canvas" id="chart__canvas"/> -->
+  </view>
+</view>

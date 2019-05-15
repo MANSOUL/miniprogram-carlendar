@@ -1,33 +1,35 @@
 <!--pages/account/index.wxml-->
-<scroll-view>
 <view class='account-container'>
-  <carlendar 
-    bindmonthchange='handleMonthChange'
-    binddatechange='handleDateChange'></carlendar>
-  <view class='spend-list'>
-    <cascade-view 
-      height="110"
-      ops="{{ops}}"
-      wx:for="{{spendList}}" 
-      wx:key="{{item.id}}"
-      identity="{{item.id}}"
-      bindoptap="handleViewOpTap">
-      <view class='spend-item'>
-        <view class='spend-item-wrapper'>
-          <view class='spend-item-left'>
-            <view class='time'>{{item.dateHourString}}</view>
-            <view class='tag'>{{item.tag}}</view>
+  <view class="carlendar-box">
+    <carlendar 
+      bindmonthchange='handleMonthChange'
+      binddatechange='handleDateChange'></carlendar>
+  </view>
+  <!-- <scroll-view class="scroll-view" scroll-y="{{true}}"> -->
+    <view class='spend-list'>
+      <cascade-view 
+        height="110"
+        ops="{{ops}}"
+        wx:for="{{spendList}}" 
+        wx:key="{{item.id}}"
+        identity="{{item.id}}"
+        bindoptap="handleViewOpTap">
+        <view class='spend-item'>
+          <view class='spend-item-wrapper'>
+            <view class='spend-item-left'>
+              <view class='time'>{{item.dateHourString}}</view>
+              <view class='tag'>{{item.tag}}</view>
+            </view>
+            <view class='spend'>¥{{item.money}}</view>
           </view>
-          <view class='spend'>¥{{item.money}}</view>
         </view>
-      </view>
-    </cascade-view>
-  </view>
-  <view wx:if="{{spendList.length > 0}}" class='total-item'>
-    <text>当月 {{monthTotal}}</text>
-    <text>¥{{total}}</text>
-  </view>
-  <view wx:if="{{spendList.length === 0}}"  class='no-record'><text>无记录</text></view>
+      </cascade-view>
+    </view>
+    <view wx:if="{{spendList.length > 0}}" class='total-item'>
+      <text>当月 {{monthTotal}}</text>
+      <text>¥{{total}}</text>
+    </view>
+    <view wx:if="{{spendList.length === 0}}"  class='no-record'><text>无记录</text></view>
+  <!-- </scroll-view> -->
   <view class='create-new' bindtap='handleAddTap'>+</view>
 </view>
-</scroll-view>

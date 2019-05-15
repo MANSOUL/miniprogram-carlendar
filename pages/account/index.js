@@ -1,13 +1,6 @@
 // pages/account/index.js
 const util = require('../../utils/util')
 const accountModel = require('../../models/AccountModel')
-function getTotalMoney(list) {
-  let total = 0
-  for (let i = 0; i < list.length; i++) {
-    total += Number(list[i].money)
-  }
-  return total
-}
 
 Page({
   data: {
@@ -33,7 +26,7 @@ Page({
 
   getDateList(year, month, date) {
     let spendList = accountModel.getListByDate(`${year}-${month}-${date}`)
-    let total = getTotalMoney(spendList)
+    let total = accountModel.getTotalMoney(spendList)
     this.setData({
       year,
       month, 
@@ -45,7 +38,7 @@ Page({
 
   getMonthList(year, month) {
     let spendList = accountModel.getListByDate(`${year}-${month}`)
-    let monthTotal = getTotalMoney(spendList)
+    let monthTotal = accountModel.getTotalMoney(spendList)
     this.setData({
       monthTotal
     })
@@ -86,6 +79,11 @@ Page({
     if (op === '删除') {
       accountModel.remove(id)
       this.getDateList(this.data.year, this.data.month, this.data.date)
+      this.getMonthList(this.data.year, this.data.month)
     }
+  },
+
+  handleGetUserInfo(res) {
+    console.log(res);
   }
 })
