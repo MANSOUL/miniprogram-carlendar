@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "music-card": "../../components/music-card/index"
+    "music-card": "../../components/music-card/index",
+    "tab-bar": "../../custom-tab-bar/index"
   }
 }

@@ -30,5 +30,4 @@
   </view>
   <view wx:if="{{spendList.length === 0}}"  class='no-record'><text>无记录</text></view>
   <view class='create-new' bindtap='handleAddTap'>+</view>
-  <tab-bar config="{{tabBar}}"></tab-bar>
 </view>

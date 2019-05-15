@@ -1,0 +1,13 @@
+<view class="page">
+  <view class="tab">
+    <view class="tab__slider" style="transform: translateX(-{{tabIndex * 100}}%)">
+      <view class="tab__page">
+        <page-account id="page-account"></page-account>
+      </view>
+      <view class="tab__page">
+        <page-me id="page-me"></page-me>
+      </view>
+    </view>
+  </view>
+  <tab-bar config="{{tabBar}}" tabIndex="{{tabIndex}}" bindtapchange="handleTabChange"></tab-bar>
+</view>

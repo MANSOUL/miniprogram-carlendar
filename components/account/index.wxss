@@ -2,7 +2,7 @@
 .account-container {
   background-color: #323039;
   min-height: 100vh;
-  padding-bottom: 110rpx;
+  padding-bottom: 100rpx;
 }
 .carlendar-box {
   width: 720rpx;
@@ -21,7 +21,7 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 120rpx;
+  bottom: 220rpx;
   margin: 0 auto;
   width: 120rpx;
   height: 120rpx;

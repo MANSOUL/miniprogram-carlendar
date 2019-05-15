@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/me/index",
     "pages/account/index",
     "pages/add/index"
@@ -11,21 +12,5 @@
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "color": "#fe8080",
-    "selectedColor": "#fe8080",
-    "backgroundColor": "#323039",
-    "list": [{
-      "pagePath": "pages/account/index",
-      "text": "",
-      "iconPath": "image/account-book.png",
-      "selectedIconPath": "image/account-book1.png"
-    },{
-      "pagePath": "pages/me/index",
-      "text": "",
-      "iconPath": "image/me.png",
-      "selectedIconPath": "image/me1.png"
-    }]
-  },
   "usingComponents": {}
 }

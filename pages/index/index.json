@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tab-bar": "../../custom-tab-bar/index",
+    "page-account": "../../components/account/index",
+    "page-me": "../../components/me/index"
+  }
+}

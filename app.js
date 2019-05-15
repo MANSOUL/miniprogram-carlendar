@@ -56,7 +56,39 @@ App({
       });
     }
   },
+  editTabBar () {
+    const tabBar = this.globalData.tabBar;
+    const currentPages = getCurrentPages();
+    const thatPage = currentPages[currentPages.length - 1];
+    let pagePath = thatPage.__route__;
+    (pagePath.indexOf('/') != 0) && (pagePath = '/' + pagePath);
+    for (var i in tabBar.list) {
+      tabBar.list[i].selected = false;
+      (tabBar.list[i].pagePath === pagePath) && (tabBar.list[i].selected = true);
+    }
+    thatPage.setData({
+      tabBar: tabBar
+    });
+  },
   globalData: {
-    globalUser: null
+    globalUser: null,
+    tabBar: {
+      color: "#ffffff",
+      selectedColor: "#5cb2d3",
+      backgroundColor: "#323039",
+      list: [{
+        pagePath: "/pages/account/index",
+        text: "首页",
+        iconPath: "../image/account-book.png",
+        selectedIconPath: "../image/account-book1.png",
+        selected: true
+      }, {
+        pagePath: "/pages/me/index",
+        text: "主页",
+        iconPath: "../image/me.png",
+        selectedIconPath: "../image/me1.png",
+        selected: false
+      }]
+    }
   }
 });

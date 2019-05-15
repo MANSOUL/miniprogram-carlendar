@@ -1,6 +1,7 @@
 const { getTimeTrunk, getHost } = require('../../utils/util');
 const accountModel = require('../../models/AccountModel');
 const UploadTip = require('../../models/UploadTip');
+const app = getApp();
 
 Page({
   data: {
@@ -12,13 +13,13 @@ Page({
     totalMoney: accountModel.getTotalMoney(accountModel.get()),
     uploading: false,
     uploadSuccess: false,
-    showUploadTip: UploadTip.get()
+    showUploadTip: UploadTip.get(),
+    tabBar: app.globalData.tabBar
   },
   onLoad() {
-    console.log('onLoad');
+    app.editTabBar();
   },
   onShow() {
-    console.log('onShow');
     this.setData({
       timeTrunk: getTimeTrunk(),
       totalCount: accountModel.get().length,
@@ -27,12 +28,10 @@ Page({
     });
   },
   onReady() {
-    console.log('onReady');
     this.detectSetting();
     this.createChart();
   },
   onHide() {
-    console.log('onHide');
   },
   detectSetting() {
     const that = this;

@@ -93,6 +93,9 @@ Component({
   attached() {
     // this.draw();
   },
+  detached() {
+    this.audioContext && this.audioContext.stop();
+  },
   ready() {
     console.log(0)
     wx.getSystemInfo({success: info => console.log(info)})

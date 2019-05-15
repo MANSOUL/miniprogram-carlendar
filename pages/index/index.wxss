@@ -1,0 +1,12 @@
+.tab {
+  width: 100%;
+  white-space: nowrap;
+}
+.tab__slider {
+  transition: all .2s;
+}
+.tab__page {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}

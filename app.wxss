@@ -8,4 +8,5 @@
   padding: 200rpx 0;
   box-sizing: border-box;
   color: #333;
+  background-color: #323039;
 } 

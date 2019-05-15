@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "carlendar": "../../components/carlendar/index",
-    "cascade-view": "../../components/cascade-slide-view/index"
+    "cascade-view": "../../components/cascade-slide-view/index",
+    "tab-bar": "../../custom-tab-bar/index"
   }
 }

@@ -2,6 +2,7 @@
 const util = require('../../utils/util');
 const accountModel = require('../../models/AccountModel');
 const UploadTip = require('../../models/UploadTip');
+const app = getApp();
 
 Page({
   data: {
@@ -11,10 +12,12 @@ Page({
     total: 0,
     spendList: [],
     ops: ['删除'],
-    monthTotal: 0
+    monthTotal: 0,
+    tabBar: app.globalData.tabBar
   },
 
   onLoad() {
+    app.editTabBar();
   },
 
   onShow() {
