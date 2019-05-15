@@ -1,6 +1,7 @@
 // pages/account/index.js
-const util = require('../../utils/util')
-const accountModel = require('../../models/AccountModel')
+const util = require('../../utils/util');
+const accountModel = require('../../models/AccountModel');
+const UploadTip = require('../../models/UploadTip');
 
 Page({
   data: {
@@ -80,10 +81,7 @@ Page({
       accountModel.remove(id)
       this.getDateList(this.data.year, this.data.month, this.data.date)
       this.getMonthList(this.data.year, this.data.month)
+      UploadTip.set(true);
     }
-  },
-
-  handleGetUserInfo(res) {
-    console.log(res);
   }
 })

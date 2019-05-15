@@ -4,7 +4,10 @@
 const KEY = 'upload_tip_key';
 
 function get() {
-  return wx.getStorageSync(KEY) || true;
+  if (wx.getStorageSync(KEY) === false) {
+    return false
+  }
+  return true;
 }
 
 function set(t) {
