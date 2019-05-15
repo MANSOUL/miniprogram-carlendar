@@ -1,6 +1,6 @@
 .page {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #323039;
   padding: 40rpx;
   box-sizing: border-box;
@@ -126,7 +126,7 @@
 }
 .tile::before {
   content: "";
-  width: 6rpx;
+  width: 9rpx;
   height: 1em;
   display: inline-block;
   border-radius: 6rpx;

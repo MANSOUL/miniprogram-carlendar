@@ -111,5 +111,40 @@ Page({
         }
       }
     });
+  },
+  handleDownloadData() {
+    const that = this;
+    wx.request({
+      url: getHost() + '/record',
+      method: 'GET',
+      header: {
+        authorization: wx.getStorageSync('token')
+      },
+      success(res) {
+        const { data, statusCode } = res;
+        if (statusCode === 200 && data.success) {
+          wx.showToast({
+            title: '数据下载成功',
+            icon: 'success',
+            duration: 2000
+          });
+          if (data.data.content) {
+            accountModel.recoveryData(JSON.parse(data.data.content));
+            that.setData({
+              totalCount: accountModel.get().length,
+              totalDay: accountModel.getTotalDay(accountModel.get()),
+              totalMoney: accountModel.getTotalMoney(accountModel.get())
+            });
+          }
+        }
+        else {
+          wx.showToast({
+            title: '数据下载失败',
+            icon: 'warn',
+            duration: 2000
+          });
+        }
+      }
+    });
   }
 });

@@ -43,7 +43,7 @@ function add(n1, n2) {
 }
 
 function getHost() {
-  const DEV = 'http://localhost:8888';
+  const DEV = 'http://192.168.31.112:8888';
   const PROP = 'https://speednote.jokme.com';
   return DEV;
 }

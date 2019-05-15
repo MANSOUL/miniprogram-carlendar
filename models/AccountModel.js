@@ -98,6 +98,11 @@ class AccountModel {
     })
     return count;
   }
+
+  recoveryData(lists) {
+    this.lists = lists;
+    this._saveListToStorage();
+  }
 }
 
 module.exports = new AccountModel()
