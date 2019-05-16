@@ -13,7 +13,7 @@
       </view>
     </view>
     <view wx:if="{{showUploadTip}}" class="record">
-      {{!uploadSuccess ? '!!!有新记录，点击头像上传' : '上传成功'}}
+      {{!uploadSuccess ? '!!!有新记录，点击头像进行备份' : '上传成功'}}
     </view>
     <view class="tile tile--bm">Account</view>
     <view class="account">
