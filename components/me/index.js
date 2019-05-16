@@ -12,10 +12,30 @@ Component({
     totalMoney: accountModel.getTotalMoney(accountModel.get()),
     uploading: false,
     uploadSuccess: false,
-    showUploadTip: UploadTip.get()
+    showUploadTip: UploadTip.get(),
+    todayMusic: {},
   },
   attached() {
+    const that = this;
     this.onShow();
+    if (Object.keys(this.data.todayMusic).length === 0) {
+      wx.request({
+        url: getHost() + '/daymusic',
+        method: 'GET',
+        success(res) {
+          const {
+            data,
+            statusCode
+          } = res;
+          if (statusCode === 200 && data.success) {
+            console.log(res)
+            that.setData({
+              todayMusic: data.data
+            });
+          }
+        }
+      });
+    }
   },
   ready() {
     this.onReady();

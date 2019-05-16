@@ -9,13 +9,16 @@
     <view class="progress__bar" style="width: {{percent}};"></view>
   </view>
   <view class="info">
-    <view bindtap="handleTap" class="info__mavatar {{play ? 'info__mavatar--play' : 'info__mavatar--pause'}}" style="background-image: url({{'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIxg40QsSVFCfgvEun7BkEprKx9lpzln4dGfm3hChfl25by2Eia9cQADib8o9kUH3s5G72FqSib5EGdQ/132'}});">
+    <view 
+      bindtap="handleTap" 
+      class="info__mavatar {{play ? 'info__mavatar--play' : 'info__mavatar--pause'}}">
+      <image class="music__icon {{play ? 'music__icon--play' : ''}}" src="{{icon}}" />
       <view class="info__icon"></view>
     </view>
     <!-- <image bindtap="handleTap" class="info_mavatar" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIxg40QsSVFCfgvEun7BkEprKx9lpzln4dGfm3hChfl25by2Eia9cQADib8o9kUH3s5G72FqSib5EGdQ/132" /> -->
     <view class="info__box">
-      <text class="info__mname">她来听我的演唱会</text>
-      <text class="info__maname">张学友</text>
+      <text class="info__mname">{{name}}</text>
+      <text class="info__maname">{{musician}}</text>
     </view>
   </view>
 </view>
