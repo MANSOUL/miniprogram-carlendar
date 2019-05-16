@@ -12,10 +12,10 @@
     </view>
     <view
       bindtap="handleCarlendarTap"
-      bindtouchstart="handleTouchStart" 
-      bindtouchmove="handleTouchMove" 
-      bindtouchend="handleTouchEnd"
-      bindtouchcancel="handleTouchEnd">
+      catchtouchstart="handleTouchStart" 
+      catchtouchmove="handleTouchMove" 
+      catchtouchend="handleTouchEnd"
+      catchtouchcancel="handleTouchEnd">
       <view 
         class="translater"
         style="{{translaterStyle}}" 

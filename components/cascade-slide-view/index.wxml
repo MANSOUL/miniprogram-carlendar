@@ -4,10 +4,10 @@
   <view 
     class="cascade-view__upper"
     style="{{upperStyle}}"
-    bindtouchstart="handleTouchStart"
-    bindtouchmove="handleTouchMove"
-    bindtouchend="handleTouchEnd"
-    bindtouchcancel="handleTouchEnd">
+    catchtouchstart="handleTouchStart"
+    catchtouchmove="handleTouchMove"
+    catchtouchend="handleTouchEnd"
+    catchtouchcancel="handleTouchEnd">
     <slot></slot>
   </view>
   <view class="cascade-view__bottom">
