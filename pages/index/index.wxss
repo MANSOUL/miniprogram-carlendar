@@ -1,3 +1,11 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  background-color: #323039;
+  box-sizing: border-box;
+  padding-bottom: 110rpx;
+  overflow-x: hidden;
+}
 .tab {
   width: 100%;
   white-space: nowrap;

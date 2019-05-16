@@ -1,9 +1,6 @@
 .page {
-  position: relative;
   min-height: 100vh;
   background-color: #323039;
-  box-sizing: border-box;
-  padding-bottom: 110rpx;
 }
 .page__box {
   padding: 40rpx;
