@@ -3,8 +3,10 @@
   width: 100%;
   margin: 0 auto;
   background-color: #383e48;
-  transition: all .2s;
+  transition: all 1s;
   padding-bottom: 10rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
 }
 .date-box {
   transition: all .2s;
