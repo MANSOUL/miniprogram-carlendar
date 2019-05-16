@@ -46,7 +46,8 @@ Component({
         timeTrunk: getTimeTrunk(),
         totalCount: accountModel.get().length,
         totalDay: accountModel.getTotalDay(accountModel.get()),
-        totalMoney: accountModel.getTotalMoney(accountModel.get())
+        totalMoney: accountModel.getTotalMoney(accountModel.get()),
+        showUploadTip: UploadTip.get()
       });
     },
     onReady() {
