@@ -1,5 +1,5 @@
 <!--pages/account/index.wxml-->
-<view class='account-container'>
+<scroll-view class="page-account">
   <view class="carlendar-box">
     <carlendar 
       bindmonthchange='handleMonthChange'
@@ -30,4 +30,4 @@
   </view>
   <view wx:if="{{spendList.length === 0}}"  class='no-record'><text>无记录</text></view>
   <view class='create-new' bindtap='handleAddTap'>+</view>
-</view>
+</scroll-view>

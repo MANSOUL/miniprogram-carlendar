@@ -1,7 +1,7 @@
 /* pages/account/index.wxss */
-.account-container {
-  background-color: #323039;
-  min-height: 100vh;
+.page-account {
+  background-color: var(--background-color);
+  height: calc(100vh - 110rpx);
 }
 .carlendar-box {
   width: 720rpx;
@@ -10,10 +10,6 @@
   border-radius: 10rpx;
   overflow: hidden;
   box-shadow: 0 10rpx 10rpx 0 rgba(0,0,0,0.1);
-}
-
-.scroll-view {
-  height: 50vh;
 }
 
 .create-new {
@@ -26,9 +22,7 @@
   height: 120rpx;
   line-height: 110rpx;
   text-align: center;
-  /* background-color: #fe8080; */
-  /* background: linear-gradient(170deg, #2ebf73, #5cb2d3); */
-  background: #5cb2d3;
+  background: var(--primary-color);
   border-radius: 100%;
   color: #fff;
   font-size: 70rpx;
@@ -45,7 +39,7 @@
   padding: 0 44rpx;
   text-align: right;
   font-size: 44rpx;
-  color: #5cb2d3;
+  color: var(--primary-color);
   font-weight: bold;
   background-color: #383e48;
 }
@@ -150,7 +144,7 @@
 }
 
 .dash_uname {
-  color: #5cb2d3;
+  color: var(--primary-color);
 }
 
 .dash__avatar {
@@ -208,7 +202,7 @@
 }
 
 .record {
-  color: #5cb2d3;
+  color: var(--primary-color);
   font-size: 26rpx;
   margin-top: 16rpx;
 }
@@ -262,7 +256,7 @@
 }
 
 .account__value {
-  color: #5cb2d3;
+  color: var(--primary-color);
   font-weight: bold;
   font-size: 31rpx;
 }

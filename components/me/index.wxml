@@ -1,4 +1,4 @@
-<view class="page">
+<scroll-view class="page" scroll-y="{{true}}">
   <view class="page__box">
     <view wx:if="{{!hasUserInfo}}" class="auth">
       <button class="auth__button" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">授权登录信息</button>
@@ -47,5 +47,4 @@
       <!-- <canvas class="chart__canvas" canvas-id="chart__canvas" id="chart__canvas"/> -->
     </view>
   </view>
-  <tab-bar config="{{tabBar}}"></tab-bar>
-</view>
+</scroll-view>
