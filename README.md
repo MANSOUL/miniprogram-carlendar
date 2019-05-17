@@ -64,7 +64,7 @@
 
 ## 层叠滑动View
 类似QQ消息项的组件，向右滑动会展示出操作项
-- `components/deleteable-tag`
+- `components/cascade-slide-view`
 ---
 | 属性名 | 类型 | 说明 |
 |:------:|:------:|:-------:|
@@ -84,6 +84,27 @@
   bindoptap="handleViewOpTap">
   <text>这里是插槽</text>
 </cascade-view>
+```
+
+## 通讯簿组件
+仿微信通讯录组件
+
+- `components/address-book`
+---
+| 属性名 | 类型 | 说明 |
+|:------:|:------:|:-------:|
+| dict | Object | 通讯录配置项 `{a: ['ab', 'ac'], b: ['bc', 'bd']}` |
+| chars | Array | 配置项的keys `['a', 'b']` |
+| handleAddressTap | Function | 通讯录项点击回调 |
+
+- 使用方法：
+```
+<address-book 
+    class="address-book"
+    data="{{dict}}"
+    chars="{{chars}}"
+    binditemtap="handleAddressTap">
+</address-book>
 ```
 
 
