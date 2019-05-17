@@ -12,5 +12,10 @@ Component({
   data: {
     dict: data,
     chars: Object.keys(data)
+  },
+  methods: {
+    handleAddressTap(e) {
+      console.log(e.detail)
+    }
   }
 });

@@ -11,6 +11,9 @@ Component({
     chars: {
       type: Array,
       value: []
+    },
+    itemtap: {
+      type: Function
     }
   },
   data: {
@@ -45,6 +48,12 @@ Component({
       this.setData({
         currentIndex: -1
       });
+    },
+    handleTap(e) {
+      const info = e.target.dataset.info;
+      if (info) {
+        this.triggerEvent('itemtap', info);
+      }
     },
     move(t) {
       const len = this.data.chars.length;

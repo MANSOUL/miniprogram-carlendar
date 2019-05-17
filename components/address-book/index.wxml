@@ -1,9 +1,13 @@
 <view class="address-book">
-  <scroll-view class="scoll-view" scroll-y="{{true}}" scroll-top="{{scrollTop}}">
+  <scroll-view class="scoll-view" scroll-y="{{true}}" scroll-top="{{scrollTop}}" bindtap="handleTap">
     <view class="char-block" wx:for="{{chars}}" wx:key="{{index}}">
       <view class="char-block__label" id="tag-{{item}}">{{item}}</view>
       <view class="char-block__list">
-        <view class="char-block__item" wx:for="{{data[item]}}" wx:key="{{index}}">{{item}}</view>
+        <view 
+          class="char-block__item" 
+          wx:for="{{data[item]}}" 
+          wx:key="{{index}}"
+          data-info="{{item}}">{{item}}</view>
       </view>
     </view>
   </scroll-view>

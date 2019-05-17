@@ -8,7 +8,8 @@
 {
   "usingComponents": {
     "carlendar": "../../components/carlendar/index",
-    "cascade-view": "../../components/cascade-slide-view/index"
+    "cascade-view": "../../components/cascade-slide-view/index",
+    "address-book": "../../components/address-book/index"
   }
 }
 ```
