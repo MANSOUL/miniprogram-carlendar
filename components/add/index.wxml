@@ -1,3 +1,6 @@
 <view class="page-add">
-  <address-book class="address-book"></address-book>
+  <address-book 
+    class="address-book"
+    data="{{dict}}"
+    chars="{{chars}}"></address-book>
 </view>
