@@ -3,7 +3,7 @@ const app = getApp();
 Page({
   data: {
     tabBar: app.globalData.tabBar,
-    tabIndex: 0
+    tabIndex: 1
   },
   handleTabChange(e) {
     this.setData({

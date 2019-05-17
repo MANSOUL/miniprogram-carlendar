@@ -83,6 +83,12 @@ App({
         selectedIconPath: "../image/account-book1.png",
         selected: true
       }, {
+        pagePath: "/pages/account/index",
+        text: "首页",
+        iconPath: "../image/plus.png",
+        selectedIconPath: "../image/plus1.png",
+        selected: true
+      }, {
         pagePath: "/pages/me/index",
         text: "主页",
         iconPath: "../image/me.png",

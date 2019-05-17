@@ -5,6 +5,9 @@
         <page-account id="page-account"></page-account>
       </view>
       <view class="tab__page">
+        <page-add></page-add>
+      </view>
+      <view class="tab__page">
         <page-me id="page-me"></page-me>
       </view>
     </view>

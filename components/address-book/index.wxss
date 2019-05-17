@@ -1,0 +1,60 @@
+.address-book {
+  position: relative;
+  height: 80vh;
+  color: #ffffff;
+}
+
+.chars {
+  position: absolute;
+  top: 10rpx;
+  right: 0;
+}
+
+.chars__item {
+  display: block;
+  font-size: 26rpx;
+  line-height: 1.4;
+  color: #ffffff;
+  /* var(--primary-color) */
+  text-align: center;
+  font-weight: bold;
+}
+
+/*  */
+.scoll-view {
+  height: 100%;
+  --item-padding: 40rpx;
+}
+.char-block {
+
+}
+.char-block__label {
+  height: 70rpx;
+  line-height: 70rpx;
+  text-transform: uppercase;
+  padding-left: var(--item-padding);
+  font-size: 30rpx;
+}
+.char-block__list {
+  background-color: var(--block-color);
+}
+.char-block__item {
+  position: relative;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  padding-left: var(--item-padding);
+}
+.char-block__item::before {
+  content: "";
+  position: absolute;
+  left: var(--item-padding);
+  bottom: 1rpx;
+  display: block;
+  width: 670rpx;
+  height: 1rpx;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.char-block__item:last-child::before {
+  display: none;
+}

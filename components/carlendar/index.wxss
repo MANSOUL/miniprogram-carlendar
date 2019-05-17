@@ -2,7 +2,7 @@
 .carlendar {
   width: 100%;
   margin: 0 auto;
-  background-color: #383e48;
+  background-color: var(--block-color);
   transition: all 1s;
   padding-bottom: 10rpx;
   border-radius: 10rpx;

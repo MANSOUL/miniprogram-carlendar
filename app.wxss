@@ -1,7 +1,10 @@
 /**app.wxss**/
 page {
-  background-color: #323039;
+  background-color: ;
   height: 100%;
+  --primary-color: #5cb2d3;
+  --block-color: #383e48;
+  --background-color: #323039;
 }
 .container {
   height: 100%;
@@ -12,5 +15,5 @@ page {
   padding: 200rpx 0;
   box-sizing: border-box;
   color: #333;
-  background-color: #323039;
+  background-color: var(--background-color);
 } 
