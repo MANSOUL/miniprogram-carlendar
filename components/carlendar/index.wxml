@@ -12,7 +12,7 @@
     </view>
     <view
       bindtap="handleCarlendarTap"
-      catchtouchstart="handleTouchStart" 
+      bindtouchstart="handleTouchStart" 
       catchtouchmove="handleTouchMove" 
       catchtouchend="handleTouchEnd"
       catchtouchcancel="handleTouchEnd">
