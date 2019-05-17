@@ -1,13 +1,22 @@
 <view class="address-book">
-  <scroll-view class="scoll-view" scroll-y="{{true}}">
+  <scroll-view class="scoll-view" scroll-y="{{true}}" scroll-top="{{scrollTop}}">
     <view class="char-block" wx:for="{{chars}}" wx:key="{{index}}">
-      <view class="char-block__label">{{item}}</view>
+      <view class="char-block__label" id="tag-{{item}}">{{item}}</view>
       <view class="char-block__list">
         <view class="char-block__item" wx:for="{{data[item]}}" wx:key="{{index}}">{{item}}</view>
       </view>
     </view>
   </scroll-view>
-  <view class="chars">
-    <text class="chars__item" wx:for="{{chars}}" wx:key="{{index}}">{{item}}</text>
+  <view 
+    id="char__bar"
+    class="chars" 
+    catchtouchstart="handleTouchStart"
+    catchtouchmove="handleTouchMove"
+    catchtouchend="handleTouchEnd"
+    catchtouchcancel="handleTouchEnd">
+    <view class="chars__item" wx:for="{{chars}}" wx:key="{{index}}">
+      <!-- {{item}} -->
+      <text class="char__circle {{currentIndex === index ? 'char__circle--active' : ''}}">{{item}}</text>
+    </view>
   </view>
 </view>
