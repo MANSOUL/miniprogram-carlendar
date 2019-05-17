@@ -1,0 +1,7 @@
+.page-add {
+  height: calc(100vh - 110rpx);
+}
+
+.address-book {
+  height: 100%;
+}

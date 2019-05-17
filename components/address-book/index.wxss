@@ -1,6 +1,6 @@
 .address-book {
   position: relative;
-  height: calc(100vh - 110rpx);
+  height: 100%;
   color: #ffffff;
   box-sizing: border-box;
 }

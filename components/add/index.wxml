@@ -1,3 +1,3 @@
 <view class="page-add">
-  <address-book></address-book>
+  <address-book class="address-book"></address-book>
 </view>
