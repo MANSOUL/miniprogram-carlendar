@@ -1,13 +1,15 @@
 .page {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   background-color: #323039;
   box-sizing: border-box;
   padding-bottom: 110rpx;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .tab {
-  width: 100%;
+  flex-grow: 1;
+  height: 100%;
   white-space: nowrap;
 }
 .tab__slider {

@@ -1,5 +1,5 @@
 <view class="page">
-  <view class="tab">
+  <scroll-view class="tab" scroll-y="{{true}}">
     <view class="tab__slider" style="transform: translateX(-{{tabIndex * 100}}%)">
       <view class="tab__page">
         <page-account id="page-account"></page-account>
@@ -11,6 +11,6 @@
         <page-me id="page-me"></page-me>
       </view>
     </view>
-  </view>
+  </scroll-view>
   <tab-bar config="{{tabBar}}" tabIndex="{{tabIndex}}" bindtapchange="handleTabChange"></tab-bar>
 </view>
