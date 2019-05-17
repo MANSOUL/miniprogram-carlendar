@@ -1,16 +1,16 @@
 <view class="page">
-  <scroll-view class="tab" scroll-y="{{true}}">
+  <view class="tab" scroll-y="{{true}}">
     <view class="tab__slider" style="transform: translateX(-{{tabIndex * 100}}%)">
       <view class="tab__page">
-        <page-account id="page-account"></page-account>
+        <page-account class="page__item" id="page-account"></page-account>
       </view>
       <view class="tab__page">
-        <page-add></page-add>
+        <page-add class="page__item"></page-add>
       </view>
       <view class="tab__page">
-        <page-me id="page-me"></page-me>
+        <page-me class="page__item" id="page-me"></page-me>
       </view>
     </view>
-  </scroll-view>
+  </view>
   <tab-bar config="{{tabBar}}" tabIndex="{{tabIndex}}" bindtapchange="handleTabChange"></tab-bar>
 </view>

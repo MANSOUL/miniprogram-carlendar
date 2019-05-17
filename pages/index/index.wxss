@@ -1,14 +1,12 @@
 .page {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 110rpx);
   overflow: hidden;
   background-color: #323039;
   box-sizing: border-box;
   padding-bottom: 110rpx;
-  /* overflow-x: hidden; */
 }
 .tab {
-  flex-grow: 1;
   height: 100%;
   white-space: nowrap;
 }

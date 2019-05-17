@@ -1,7 +1,8 @@
 .address-book {
   position: relative;
-  height: 80vh;
+  height: calc(100vh - 110rpx);
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .chars {
@@ -15,7 +16,6 @@
   font-size: 26rpx;
   line-height: 1.4;
   color: #ffffff;
-  /* var(--primary-color) */
   text-align: center;
   font-weight: bold;
 }
