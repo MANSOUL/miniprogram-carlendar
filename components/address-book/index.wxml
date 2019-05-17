@@ -15,8 +15,10 @@
     catchtouchend="handleTouchEnd"
     catchtouchcancel="handleTouchEnd">
     <view class="chars__item" wx:for="{{chars}}" wx:key="{{index}}">
-      <!-- {{item}} -->
       <text class="char__circle {{currentIndex === index ? 'char__circle--active' : ''}}">{{item}}</text>
+    </view>
+    <view wx:if="{{currentIndex !== -1}}" class="chars__tip" style="transform: translateY({{100 * currentIndex}}%);">
+      <text class="chars__tip-c">{{chars[currentIndex]}}</text>
     </view>
   </view>
 </view>

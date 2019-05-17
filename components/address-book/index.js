@@ -52,7 +52,6 @@ Component({
       this.move(e.changedTouches[0]);
     },
     handleTouchEnd(e) {
-      // this.move(e.changedTouches[0]);
       this.setData({
         currentIndex: -1
       });

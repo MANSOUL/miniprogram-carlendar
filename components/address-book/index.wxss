@@ -14,6 +14,26 @@
   z-index: 2;
 }
 
+.chars__tip {
+  position: absolute;
+  width: 140rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: left;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 1);
+  top: 0;
+  right: 16rpx;
+  font-size: 60rpx;
+  padding-left: 8rpx;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.chars__tip-c {
+  position: relative;
+  top: -12rpx;
+}
+
 .chars__item {
   font-size: 23rpx;
   height: 36rpx;
